@@ -8,7 +8,9 @@ pipeline {
             }
         }
         stage('Docker Build') {
-            pwsh(script: 'docker images -a')
+            steps{
+                pwsh(script: 'docker images -a')
+            }
         }
     }
 }
